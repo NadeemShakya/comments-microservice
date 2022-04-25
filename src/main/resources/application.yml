@@ -1,0 +1,27 @@
+micronaut:
+  application:
+    name: comment
+  server:
+    port: 8585
+netty:
+  default:
+    allocator:
+      max-order: 3
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/nadeem
+    username: nadeem
+    password: superman
+    driverClassName: org.postgresql.Driver
+    dialect: POSTGRES
+liquibase:
+  datasources:
+    default:
+      change-log: 'classpath:db/migrations/liquibase-changelog.xml'
